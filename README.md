@@ -1,1 +1,0 @@
-# realization_PHP_console_POO_mobile_v1
