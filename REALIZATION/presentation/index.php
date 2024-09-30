@@ -3,7 +3,7 @@
 require('./presentation.php');
 function ask($ask)
 {
-    echo $ask;
+    echo $ask . " : ";
     return trim(fgets(STDIN));
 }
 
@@ -59,7 +59,9 @@ function start()
         echo "++++++++++++++++++++++++++++++++++++++++\n";
         echo "enter [a]  [add book]" . "\n";
         echo "enter [v] [view books]" . "\n";
-        echo "enter [d] [delete text]" . "\n";
+        echo "enter [d] [delete book]" . "\n";
+        echo "enter [e] [edit book]" . "\n";
+        echo "enter [s] [search book]" . "\n";
         echo "enter [ex] [closs application]" . "\n";
 
         echo "++++++++++++++++++++++++++++++++++++++++\n";
@@ -76,10 +78,16 @@ function start()
                 $view->add();
                 break;
             case 'd':
-
-                $iddelete = ask('enter id delete : ');
-                // $view = new Presentation();
-                // $view->delete($iddelete);
+                $deleteee = new Presentation();
+                $deleteee->delete();
+                break;
+            case 'e':
+                $deleteee = new Presentation();
+                $deleteee->edit();
+                break;
+            case 's':
+                $deleteee = new Presentation();
+                $deleteee->search();
                 break;
             case 'exit':
                 $ax = true;

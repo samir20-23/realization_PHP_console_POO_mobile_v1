@@ -5,9 +5,9 @@ class Entities
     public $ISBN;
     public $title;
 
-    public function __construct($ISBN, $title)
+    public function __construct($id, $ISBN, $title)
     {
-        $this->id = time();
+        $this->id = $id;
         $this->ISBN = $ISBN;
         $this->title = $title;
     }
